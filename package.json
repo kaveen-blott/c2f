@@ -6,12 +6,13 @@
     "c2f": "./dist/bin/c2f.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp -r templates dist/templates",
     "dev": "npm run build && node dist/bin/c2f.js",
     "dev:watch": "tsx watch bin/c2f.ts"
   },
   "dependencies": {
     "chalk": "^5.3.0",
+    "consola": "^3.4.2",
     "fs-extra": "^11.2.0"
   },
   "devDependencies": {
