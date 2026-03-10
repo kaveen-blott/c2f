@@ -7,7 +7,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node bin/c2f.ts"
+    "dev": "npm run build && node dist/bin/c2f.js",
+    "dev:watch": "tsx watch bin/c2f.ts"
   },
   "dependencies": {
     "chalk": "^5.3.0",
@@ -16,7 +17,7 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^20.0.0",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.5.0"
   }
 }

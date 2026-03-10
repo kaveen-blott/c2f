@@ -28,3 +28,6 @@ coverage/
 .cache/
 tmp/
 temp/
+
+# Project Files
+.ai/

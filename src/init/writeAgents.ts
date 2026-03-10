@@ -1,20 +1,19 @@
 import fs from "fs-extra";
-import { AgentPlan } from "../types/agents";
+import type { AgentPlan } from "../types/agents.js";
 
 export async function writeAgents(plan: AgentPlan) {
   await fs.ensureDir(".ai/agents");
 
   for (const agent of plan.agents) {
     const content = `
-        # ${agent.name}
+# ${agent.name}
 
-        Role:
-        ${agent.role}
+Role:
+${agent.role}
 
-        Responsibilities:
-        ${agent.responsibilities.join("\n")}
+Responsibilities:
+${agent.responsibilities.join("\n")}
 `;
-
     await fs.writeFile(`.ai/agents/${agent.name}.md`, content);
   }
 }

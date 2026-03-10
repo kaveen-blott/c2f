@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { initC2F } from "../src/init/initC2F";
+import { initC2F } from "../src/init/initC2F.js";
 
 const command = process.argv[2];
 

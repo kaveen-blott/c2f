@@ -1,4 +1,4 @@
-import { AgentPlan } from "../types/agents";
+import type { AgentPlan } from "../types/agents.js";
 
 export async function generateAgentPlan(project: any): Promise<AgentPlan> {
   const agents = [];
